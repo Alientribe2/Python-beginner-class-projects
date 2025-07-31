@@ -146,7 +146,7 @@ class GameC4:
             if self.for_draw():
                 self.game_over = True
                 messagebox.showinfo("Game Over", "Its a Draw")
-                self.window.after(1000, self.reset_game)
+                self.window.after(2000, self.reset_game)
                 return
 
             # Switch players or call computer turn depending on mode
@@ -157,7 +157,7 @@ class GameC4:
                 )
             else:
                 self.computer_wait = True
-                self.window.after(600, self.computer_turn)
+                self.window.after(700, self.computer_turn)
 
     def computer_turn(self):
         if self.game_mode != "pvc":  # Only run AI in Player vs Computer mode
